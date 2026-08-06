@@ -377,7 +377,10 @@ function seedSummers(){return{meta:{name:'Summers — Rescue & Launch',client:'S
     {type:'deployment',title:'Launch & readiness',items:['Full QA','Go-live + DNS','CMS training','You own the theme & site'],ready:true},
     {type:'agreement',title:'Final payment at Beta',statement:'Final 50% ($2,150) due at Beta release & CMS training — the finish line.'}]}]};}
 
-let P=load()||window.__PROJECT__||(window.__WIZARD__?BUILTIN.blank():seedSummers());
+let P = window.__PROJECT__ ? window.__PROJECT__
+      : window.__BOARD__   ? seedSummers()          // published board = the project snapshot
+      : window.__WIZARD__  ? BUILTIN.blank()          // New-project wizard always opens blank
+      : (load()||seedSummers());                      // local builder: resume, else demo
 let curStep=0, mode='build'; const commits={}, items={};  // commits[stepId]=stage locked · items[stepId][idx]={status:'committed'|'moved',to}
 const COMMITTABLE=new Set(['decision','agreement','task','checklist','deployment']);
 let movingItem=null;
