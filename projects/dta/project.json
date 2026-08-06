@@ -1,0 +1,28 @@
+{"meta":{"name":"Decor To Adore — Rescue & Launch","client":"Decor To Adore (+ Alabama Event Rentals)","slug":"dta","font":"editorial"},
+"steps":[
+ {"id":"d1","title":"Project Review","blocks":[
+   {"type":"checklist","title":"Status — what's built","items":["Full storefront design prototype (home, inventory, PDPs, about, stories, contact, quote)","Inventory modeled from Current RMS — 2,572 products grouped from 3,889 listings","Quote → Current RMS investigated live (contact + header write proven)","Staging content + real brand palettes recovered and adopted"]},
+   {"type":"checklist","title":"Issues we're solving","items":["Quote hand-off — free-text, re-keyed by hand (17hats), never prices automatically","Inventory & photography — ~87% of catalog has no photo","One coherent, on-brand site matching the reference (bbjlatavola.com)"]},
+   {"type":"agreement","title":"Scope — Phase 2, DTA-only","statement":"DTA Phase 2: live site, full catalog display, automation, SEO-ready. AER tabled. Quote engine deprioritized (email fallback OK). No-charge Phase 1 & 2 per commitments."},
+   {"type":"asset","title":"Storefront design prototype","kind":"website","url":"https://shift-agent.github.io/dta-aer-review/"}]},
+ {"id":"d2","title":"Milestones","blocks":[
+   {"type":"task","title":"Madeline Kiwi POC — photos + linen filter spreadsheet","owner":"Laura + Emily","due":""},
+   {"type":"task","title":"Mockups + POC (home, Madeline Kiwi PDP, About)","owner":"Glenn","due":""},
+   {"type":"task","title":"Inventory clean-up into sellable products","owner":"Glenn","due":""},
+   {"type":"task","title":"Prioritized photo shoot list","owner":"Barrett","due":""},
+   {"type":"agreement","title":"Two fonts max — Cormorant Garamond + Montserrat","statement":"Cormorant Garamond (headings, matches logo) + Montserrat (body); retire Gilda + Mr De Haviland."}]},
+ {"id":"d3","title":"Design Review","blocks":[
+   {"type":"asset","title":"Walk the storefront","kind":"prototype","url":"https://shift-agent.github.io/dta-aer-review/"},
+   {"type":"checklist","title":"Design focus areas","items":["Fonts — Cormorant Garamond + Montserrat","Banner — mobile-first + clearer CTA + new photo","Keep circle photos + all-categories shotgun-blast","Product display emulates bbjlatavola.com (function, not design)"]},
+   {"type":"decision","title":"Product display model","prompt":"Category cards → hover View Detail / Request a Swatch; facets Color · Fabric · Design · Size.","options":["Approve","Rework"]}]},
+ {"id":"d4","title":"Commit","blocks":[
+   {"type":"decision","title":"Alabama Event Rentals — yes or no?","prompt":"Stand up AER on the shared inventory now, or keep it tabled.","options":["Yes","No (tabled)"]},
+   {"type":"task","title":"Order of categories for image fulfillment","owner":"Barrett","due":""},
+   {"type":"task","title":"Naming convention for photos","owner":"Client","due":""},
+   {"type":"decision","title":"AI colour-swap / photo-edit","prompt":"Swap 2–3 real colour-variant photos on swatch-click (simple version).","options":["Phase 3","Now"]},
+   {"type":"agreement","title":"Current RMS token — rotate","statement":"⛔ Issue a fresh Current RMS API key (the shared one is stale/401) and enter it at Hub → Connections → Current RMS."}]},
+ {"id":"d5","title":"Path to Completion","blocks":[
+   {"type":"checklist","title":"Remaining approvals","items":["Quote engine / contact forms","Sub pages + Stories / Journal","All photos & content as displayed","Full inventory by category"]},
+   {"type":"deployment","title":"Testing & launch","items":["Full QA","GA4 + Meta Pixel wired","Go live","Review SEO 30 days post-launch"],"ready":true},
+   {"type":"agreement","title":"Commercials","statement":"No-charge Phase 1 & 2 per the commitments. GA4 + Meta Pixel to wire; SEO/AEO review 30 days post-launch."}]}
+]}
