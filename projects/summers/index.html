@@ -42,6 +42,8 @@
   .top .btn{height:34px;box-sizing:border-box}
   .btn svg{width:18px;height:18px;flex:0 0 auto}
   .btn.ic{width:34px;height:34px;padding:0;justify-content:center}
+  .top #pubBtn{background:#6F8A5C;border-color:#6F8A5C;color:#fff}
+  .top #pubBtn:hover{background:#5f7a4e;border-color:#5f7a4e;color:#fff}
   .asbtn{gap:5px;padding:0 10px;height:34px}
   .asbox{font-size:.84rem;font-weight:800;letter-spacing:.03em;line-height:1}
   .pvbtn{gap:7px;padding:0 14px}
@@ -319,12 +321,12 @@
 <script>
 const COLOR={decision:'dec',agreement:'agr',checklist:'chk',task:'task',wrapup:'wrap',deployment:'dep',asset:'ast'};
 const PRIMS={
-  decision:{label:'Decision',make:()=>({type:'decision',title:'A call to make',prompt:'',options:['Accept','Reject']})},
-  agreement:{label:'Agreement',make:()=>({type:'agreement',title:'Something to agree',statement:''})},
-  checklist:{label:'Checklist',make:()=>({type:'checklist',title:'Checklist',items:['Item one']})},
-  task:{label:'Task',make:()=>({type:'task',title:'A task',owner:'',due:''})},
+  decision:{label:'Decision',make:()=>({type:'decision',title:'Decision',prompt:'',options:['Accept','Reject']})},
+  agreement:{label:'Agreement',make:()=>({type:'agreement',title:'Agreement',statement:''})},
+  checklist:{label:'Checklist',make:()=>({type:'checklist',title:'Checklist',items:[]})},
+  task:{label:'Task',make:()=>({type:'task',title:'Task',owner:'',due:''})},
   wrapup:{label:'Wrap-up',make:()=>({type:'wrapup',title:'Wrap-up',body:''})},
-  deployment:{label:'Deployment / Readiness',make:()=>({type:'deployment',title:'Deploy / ready for next',items:['Go-live'],ready:true})},
+  deployment:{label:'Deployment / Readiness',make:()=>({type:'deployment',title:'Readiness',items:[],ready:true})},
   asset:{label:'Asset (site / render)',make:()=>({type:'asset',title:'Asset',kind:'website',url:''})},
 };
 const BADGE={decision:'?',agreement:'§',checklist:'✓',task:'▸',wrapup:'✎',deployment:'⤴',asset:'▦'};
@@ -375,7 +377,7 @@ function seedSummers(){return{meta:{name:'Summers — Rescue & Launch',client:'S
     {type:'deployment',title:'Launch & readiness',items:['Full QA','Go-live + DNS','CMS training','You own the theme & site'],ready:true},
     {type:'agreement',title:'Final payment at Beta',statement:'Final 50% ($2,150) due at Beta release & CMS training — the finish line.'}]}]};}
 
-let P=load()||seedSummers();
+let P=load()||window.__PROJECT__||(window.__WIZARD__?BUILTIN.blank():seedSummers());
 let curStep=0, mode='build'; const commits={}, items={};  // commits[stepId]=stage locked · items[stepId][idx]={status:'committed'|'moved',to}
 const COMMITTABLE=new Set(['decision','agreement','task','checklist','deployment']);
 let movingItem=null;
